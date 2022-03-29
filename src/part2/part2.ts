@@ -12,7 +12,7 @@ export const countLetters: (s: string) => {} = R.pipe(
 )
 
 /* Question 2 */
-const charFilter : (s : string) => boolean = (s : string) : boolean => R.contains(s, "(){}[]")
+const charFilter : (s : string) => boolean = (s : string) : boolean => R.includes(s, "(){}[]")
 const charFilterArr : (data : Array<string>) => Array<string> = (data : Array<string>) : Array<string> => R.filter(charFilter, data);
 const pMatch = (openC : string, closeC : string) => (open : string | undefined, close : string) => R.and(close === closeC, open === openC);
 const match = (open : string | undefined, close : string) => R.or(R.or(pMatch("(", ")")(open, close), pMatch("[", "]")(open, close)), pMatch("{", "}")(open, close));
