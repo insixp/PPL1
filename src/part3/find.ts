@@ -7,7 +7,7 @@ const findOrThrow = <T>(pred: (x: T) => boolean, a: T[]): T => {
     }
     throw "No element found.";
 }
-
+console.log("gil levy");
 export const findResult = undefined;
 
 /* Client code */
